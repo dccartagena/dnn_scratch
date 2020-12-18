@@ -90,7 +90,7 @@ def f_x_entropy(prediction, target, derivative = False):
     # Cross-entropy
     target_size = target.shape[0]
     if (derivative):
-        return  prediction - target 
+        return prediction - target 
     return - (1 / target_size) * np.sum(target * np.log(np.maximum(prediction, 1e-12)))
 
 # Accuracy evaluation
